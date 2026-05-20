@@ -129,41 +129,41 @@ export const sample: {
     }
   ],
   "checks": [
-    {
-      "id": "payer",
-      "label": "Payer or owner is clear",
-      "passed": true,
-      "weight": 18
-    },
-    {
-      "id": "deliverable",
-      "label": "Deliverable has acceptance criteria",
-      "passed": true,
-      "weight": 18
-    },
-    {
-      "id": "friction",
-      "label": "Account/access friction is documented",
-      "passed": false,
-      "weight": 14
-    },
-    {
-      "id": "handoff",
-      "label": "Handoff package is generated",
-      "passed": false,
-      "weight": 16
-    },
-    {
-      "id": "reuse",
-      "label": "Repeatable pipeline note exists",
-      "passed": true,
-      "weight": 12
-    }
+      {
+          "id": "owner",
+          "label": "Ticket owner and response path are clear",
+          "passed": true,
+          "weight": 18
+      },
+      {
+          "id": "criteria",
+          "label": "Severity and customer impact are written",
+          "passed": true,
+          "weight": 18
+      },
+      {
+          "id": "context",
+          "label": "Missing context or escalation friction is documented",
+          "passed": false,
+          "weight": 14
+      },
+      {
+          "id": "handoff",
+          "label": "Response kit/export is generated",
+          "passed": false,
+          "weight": 16
+      },
+      {
+          "id": "reuse",
+          "label": "Reusable support macro note exists",
+          "passed": true,
+          "weight": 12
+      }
   ],
   "deliverables": [
-    "Ranked board",
-    "Editable item inspector",
-    "Readiness checklist",
-    "Exportable handoff report"
+      "Ranked support triage board",
+      "Ticket response inspector",
+      "Support quality checklist",
+      "Exportable response kit"
   ]
 };
