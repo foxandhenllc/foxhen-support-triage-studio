@@ -1,12 +1,44 @@
-export const sample = {
+export type ItemStatus = "backlog" | "active" | "blocked" | "ready" | "done";
+
+export type WorkItem = {
+  id: string;
+  title: string;
+  category: string;
+  owner: string;
+  status: ItemStatus;
+  priority: number;
+  effort: number;
+  friction: number;
+  value: number;
+  due: string;
+  notes: string;
+};
+
+export type QualityCheck = {
+  id: string;
+  label: string;
+  passed: boolean;
+  weight: number;
+};
+
+export const sample: {
+  repoName: string;
+  title: string;
+  subtitle: string;
+  serviceLine: string;
+  description: string;
+  repositoryUrl: string;
+  liveDemoUrl: string;
+  theme: { accent: string; accent2: string; ink: string; soft: string; warm: string };
+  items: WorkItem[];
+  checks: QualityCheck[];
+  deliverables: string[];
+} = {
   "repoName": "foxhen-support-triage-studio",
   "title": "Support Triage Studio",
-  "subtitle": "Ticket prioritization sample",
+  "subtitle": "ticket triage",
   "serviceLine": "Support workflow cleanup",
-  "heroTitle": "Prioritize support tickets without losing the human context.",
-  "heroCopy": "A fictional ticket triage surface that ranks urgency, customer impact, escalation risk, and suggested response shape for a lean team.",
-  "primaryAction": "Triage inbox",
-  "secondaryAction": "Review escalations",
+  "description": "Rank fictional support tickets by urgency, customer impact, escalation risk, and response path.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-support-triage-studio",
   "liveDemoUrl": "https://foxhen-support-triage-studio.vercel.app",
   "theme": {
@@ -14,115 +46,124 @@ export const sample = {
     "accent2": "#62c2a2",
     "ink": "#0b0820",
     "soft": "#f1edff",
-    "warm": "#e4fff6",
-    "surface": "#fffaf4",
-    "muted": "#5c667a",
-    "border": "rgba(7, 18, 31, 0.12)"
+    "warm": "#e4fff6"
   },
-  "metrics": [
+  "items": [
     {
-      "label": "Tickets triaged",
-      "value": "47",
-      "note": "sample inbox"
-    },
-    {
-      "label": "Escalation risk",
-      "value": "8",
-      "note": "owner review"
-    },
-    {
-      "label": "SLA clarity",
-      "value": "97%",
-      "note": "+31 pts"
-    }
-  ],
-  "stages": [
-    {
-      "label": "Inbox",
-      "detail": "Group tickets by product area, sentiment, urgency, and affected account type.",
-      "status": "ready",
-      "owner": "Support",
-      "index": 1
-    },
-    {
-      "label": "Score",
-      "detail": "Apply a transparent severity model with visible reasons for each ranking.",
-      "status": "active",
-      "owner": "Studio",
-      "index": 2
-    },
-    {
-      "label": "Escalate",
-      "detail": "Separate product, billing, and critical defects before response drafting.",
-      "status": "waiting",
-      "owner": "Owner",
-      "index": 3
-    },
-    {
-      "label": "Respond",
-      "detail": "Package suggested response notes and next-step templates.",
-      "status": "queued",
-      "owner": "Ops",
-      "index": 4
-    }
-  ],
-  "workItems": [
-    {
+      "id": "sup-1",
       "title": "Login issue",
-      "detail": "High urgency with reproduction detail",
-      "status": "ready"
+      "category": "Intake",
+      "owner": "Chris",
+      "status": "active",
+      "priority": 5,
+      "effort": 2,
+      "friction": 1,
+      "value": 5,
+      "due": "Today",
+      "notes": "Sample ticket triage work item for support workflow cleanup."
     },
     {
+      "id": "sup-2",
       "title": "Billing mismatch",
-      "detail": "Needs owner review before response",
-      "status": "active"
+      "category": "Build",
+      "owner": "Fox & Hen",
+      "status": "backlog",
+      "priority": 4,
+      "effort": 4,
+      "friction": 2,
+      "value": 4,
+      "due": "24h",
+      "notes": "Sample ticket triage work item for support workflow cleanup."
     },
     {
+      "id": "sup-3",
       "title": "Feature request",
-      "detail": "Waiting on roadmap label",
-      "status": "waiting"
+      "category": "Review",
+      "owner": "Buyer",
+      "status": "blocked",
+      "priority": 3,
+      "effort": 3,
+      "friction": 4,
+      "value": 4,
+      "due": "48h",
+      "notes": "Sample ticket triage work item for support workflow cleanup."
     },
     {
+      "id": "sup-4",
       "title": "How-to question",
-      "detail": "Queued for template response",
-      "status": "queued"
+      "category": "Export",
+      "owner": "Automation",
+      "status": "ready",
+      "priority": 4,
+      "effort": 2,
+      "friction": 2,
+      "value": 3,
+      "due": "This week",
+      "notes": "Sample ticket triage work item for support workflow cleanup."
+    },
+    {
+      "id": "sup-5",
+      "title": "Bug escalation",
+      "category": "Intake",
+      "owner": "QA",
+      "status": "backlog",
+      "priority": 2,
+      "effort": 1,
+      "friction": 1,
+      "value": 3,
+      "due": "Waiting",
+      "notes": "Sample ticket triage work item for support workflow cleanup."
+    },
+    {
+      "id": "sup-6",
+      "title": "Response kit",
+      "category": "Build",
+      "owner": "Chris",
+      "status": "done",
+      "priority": 5,
+      "effort": 5,
+      "friction": 3,
+      "value": 5,
+      "due": "Next pass",
+      "notes": "Sample ticket triage work item for support workflow cleanup."
+    }
+  ],
+  "checks": [
+    {
+      "id": "payer",
+      "label": "Payer or owner is clear",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "deliverable",
+      "label": "Deliverable has acceptance criteria",
+      "passed": true,
+      "weight": 18
+    },
+    {
+      "id": "friction",
+      "label": "Account/access friction is documented",
+      "passed": false,
+      "weight": 14
+    },
+    {
+      "id": "handoff",
+      "label": "Handoff package is generated",
+      "passed": false,
+      "weight": 16
+    },
+    {
+      "id": "reuse",
+      "label": "Repeatable pipeline note exists",
+      "passed": true,
+      "weight": 12
     }
   ],
   "deliverables": [
-    {
-      "title": "Priority model",
-      "detail": "Severity reasons a human can inspect and override."
-    },
-    {
-      "title": "Escalation board",
-      "detail": "Clear separation between urgent and routine work."
-    },
-    {
-      "title": "Response kit",
-      "detail": "Draft-ready support notes without auto-sending anything."
-    }
-  ],
-  "timeline": [
-    {
-      "time": "0-2 hrs",
-      "detail": "Audit categories and SLA expectations"
-    },
-    {
-      "time": "2-8 hrs",
-      "detail": "Build scoring and escalation lanes"
-    },
-    {
-      "time": "8-16 hrs",
-      "detail": "QA examples and package response kit"
-    }
-  ],
-  "proof": [
-    "Good fit for support ops and AI-assist setup offers.",
-    "Highlights judgment, not opaque automation.",
-    "All tickets and customers are fictional."
+    "Ranked board",
+    "Editable item inspector",
+    "Readiness checklist",
+    "Exportable handoff report"
   ]
-} as const;
-
-export type StageStatus = "ready" | "active" | "waiting" | "queued";
-export type DemoStage = (typeof sample.stages)[number];
-export type WorkItem = (typeof sample.workItems)[number];
+};
