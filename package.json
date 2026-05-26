@@ -21,5 +21,17 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "description": "Support triage board for clustering tickets, scoring urgency, drafting responses, and exporting fix queues.",
+  "homepage": "https://foxhen-support-triage-studio.vercel.app",
+  "keywords": [
+    "support",
+    "triage",
+    "customer-support",
+    "workflow",
+    "react",
+    "typescript",
+    "vite",
+    "small-business"
+  ]
 }

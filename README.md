@@ -9,6 +9,10 @@ Public Fox & Hen working sample for a **support workflow cleanup**.
 - Demo: [https://foxhen-support-triage-studio.vercel.app](https://foxhen-support-triage-studio.vercel.app)
 - Repository: [https://github.com/foxandhenllc/foxhen-support-triage-studio](https://github.com/foxandhenllc/foxhen-support-triage-studio)
 
+## Purpose
+
+Support triage board for clustering tickets, scoring urgency, drafting responses, and exporting fix queues.
+
 ## What This Demo Is
 
 Support Triage Studio is a forkable React/Vite operating tool for teams that want to rank fictional tickets by urgency, customer impact, escalation risk, and response path. It is intentionally small, static, and public-safe so you can copy the pattern without inheriting a backend or vendor lock-in.
