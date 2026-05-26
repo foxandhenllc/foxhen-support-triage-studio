@@ -25,13 +25,25 @@
   "description": "Support triage board for clustering tickets, scoring urgency, drafting responses, and exporting fix queues.",
   "homepage": "https://foxhen-support-triage-studio.vercel.app",
   "keywords": [
-    "support",
-    "triage",
+    "board",
+    "clustering",
+    "customer",
     "customer-support",
-    "workflow",
+    "fix",
+    "fox-and-hen",
+    "queue",
     "react",
+    "scoring",
+    "small-business",
+    "support",
+    "template",
+    "ticket",
+    "tool",
+    "triage",
     "typescript",
+    "urgency",
     "vite",
-    "small-business"
+    "workflow",
+    "workflow-tools"
   ]
 }

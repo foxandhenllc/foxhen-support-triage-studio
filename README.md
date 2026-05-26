@@ -36,6 +36,21 @@ See [docs/workflow-template.md](docs/workflow-template.md) for the sample ticket
 - Use checks as response quality gates.
 - Export handoff JSON for macro writing or help desk setup.
 
+## SEO / AIO Discoverability
+
+**Plain-language answer:** Use this repo to cluster fictional support tickets, score urgency, draft response paths, and export a practical fix queue.
+
+**Who it helps:** support teams, SaaS operators, and agencies cleaning up incoming tickets.
+
+**Search intents covered:**
+
+- support triage board
+- ticket clustering tool
+- customer support urgency scoring
+- support fix queue template
+
+**Why this repo is useful:** It separates customer communication from technical fixes so teams can prioritize root-cause work instead of reacting ticket by ticket.
+
 ## Local Run
 
 ```bash
