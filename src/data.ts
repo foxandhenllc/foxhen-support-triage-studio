@@ -40,7 +40,7 @@ export const sample: {
   "serviceLine": "Support workflow cleanup",
   "description": "Rank fictional support tickets by urgency, customer impact, escalation risk, and response path.",
   "repositoryUrl": "https://github.com/foxandhenllc/foxhen-support-triage-studio",
-  "liveDemoUrl": "https://foxhen-support-triage-studio.vercel.app",
+  "liveDemoUrl": "https://freetoolsforpeople.com/support-triage-studio",
   "theme": {
     "accent": "#6241a3",
     "accent2": "#62c2a2",

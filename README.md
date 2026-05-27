@@ -6,7 +6,7 @@ Public Fox & Hen working sample for a **support workflow cleanup**.
 
 ## Live Demo
 
-- Demo: [https://foxhen-support-triage-studio.vercel.app](https://foxhen-support-triage-studio.vercel.app)
+- Demo: [https://freetoolsforpeople.com/support-triage-studio](https://freetoolsforpeople.com/support-triage-studio)
 - Repository: [https://github.com/foxandhenllc/foxhen-support-triage-studio](https://github.com/foxandhenllc/foxhen-support-triage-studio)
 
 ## Purpose
