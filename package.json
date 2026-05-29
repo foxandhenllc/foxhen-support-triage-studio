@@ -45,5 +45,6 @@
     "vite",
     "workflow",
     "workflow-tools"
-  ]
+  ],
+  "license": "MIT"
 }
